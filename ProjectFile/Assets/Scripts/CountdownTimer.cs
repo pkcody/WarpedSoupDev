@@ -8,7 +8,7 @@ public class CountdownTimer : MonoBehaviour
 {
     public GameObject cam;
     float currentTime = 0f;
-    float startingTime = 30f;
+    float startingTime = 10f;
 
     Color red = Color.red;
 
