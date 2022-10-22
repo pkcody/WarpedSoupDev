@@ -33,7 +33,7 @@ public class CountdownTimer : MonoBehaviour
         {
             currentTime = 0;
             cam.transform.position = new Vector3(-100, 0, 0);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            ChangeScene.instance.ChangeToScene("MakeGameSide");
         }
     }
 }

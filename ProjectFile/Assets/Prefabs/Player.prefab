@@ -231,7 +231,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: ca9f5fa95ffab41fb9a615ab714db018, type: 3}
+  m_Actions: {fileID: -944628639613478452, guid: 2079a50a20400e54e83bdd45196d09c2, type: 3}
   m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
@@ -244,30 +244,6 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8837087517767416026}
-        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
-        m_MethodName: OnMove
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 351f2ccd-1f9f-44bf-9bec-d62ac5c5f408
-    m_ActionName: Player/Move[/DualShock4GamepadHID/leftStick,/XInputControllerWindows/leftStick,/Keyboard/w,/Keyboard/upArrow,/Keyboard/s,/Keyboard/downArrow,/Keyboard/a,/Keyboard/leftArrow,/Keyboard/d,/Keyboard/rightArrow]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6b444451-8a00-4d00-a97e-f47457f736a8
-    m_ActionName: Player/Look[/DualShock4GamepadHID/rightStick,/XInputControllerWindows/rightStick,/Mouse/delta]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 6c2ab1b8-8984-453a-af3d-a3c78ae1679a
-    m_ActionName: Player/Fire[/DualShock4GamepadHID/rightTrigger,/XInputControllerWindows/rightTrigger,/Mouse/leftButton]
   - m_PersistentCalls:
       m_Calls: []
     m_ActionId: c95b2375-e6d9-4b88-9c4c-c5e76515df4b
@@ -312,22 +288,6 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 8837087517767416026}
         m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
-        m_MethodName: OnJump
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 01b77452-9e61-4100-91aa-64fa15d53102
-    m_ActionName: Player/Jump[/DualShock4GamepadHID/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 8837087517767416026}
-        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
         m_MethodName: OnPickUp
         m_Mode: 0
         m_Arguments:
@@ -338,11 +298,75 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-    m_ActionId: 308e9d7b-9320-4372-ae61-eaf33457170a
-    m_ActionName: Player/PickUp[/DualShock4GamepadHID/buttonWest]
+    m_ActionId: cb5fa6f4-ddc7-4b32-b917-3668c7511d89
+    m_ActionName: Player/PickUp[/DualShock4GamepadHID/buttonWest,/DualShock4GamepadHID1/buttonWest,/DualShock4GamepadHID2/buttonWest]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8837087517767416026}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: OnMove
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: c5634f15-8409-4a80-bef2-f1ef73101702
+    m_ActionName: Player/Move[/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID1/leftStick,/DualShock4GamepadHID2/leftStick]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 0df5f233-c2e2-458c-bc6a-c39ff6bc97e4
+    m_ActionName: Player/Pause[/DualShock4GamepadHID/start,/DualShock4GamepadHID1/start,/DualShock4GamepadHID2/start]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 8837087517767416026}
+        m_TargetAssemblyTypeName: CharacterMovement, Assembly-CSharp
+        m_MethodName: OnJump
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 6c95667e-2ca6-4251-bafb-6a0ac8f64413
+    m_ActionName: Player/Jump[/DualShock4GamepadHID/buttonSouth,/DualShock4GamepadHID1/buttonSouth,/DualShock4GamepadHID2/buttonSouth]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 002abadf-97b0-4e24-92c1-1b3d4528dffe
+    m_ActionName: UI/PreviousHat[/DualShock4GamepadHID/leftShoulder,/DualShock4GamepadHID1/leftShoulder,/DualShock4GamepadHID2/leftShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 81d6203a-d5da-4fd3-a287-7231221bd485
+    m_ActionName: UI/NextHat[/DualShock4GamepadHID/rightShoulder,/DualShock4GamepadHID1/rightShoulder,/DualShock4GamepadHID2/rightShoulder]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: b92d83a0-1c92-4d40-8ac1-bbdb2b6f744d
+    m_ActionName: UI/ReadyUp[/DualShock4GamepadHID/buttonWest,/DualShock4GamepadHID1/buttonWest,/DualShock4GamepadHID2/buttonWest]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 7661f508-22d8-404a-8292-9dead788c7a8
+    m_ActionName: UI/UnReadyUp[/DualShock4GamepadHID/buttonEast,/DualShock4GamepadHID1/buttonEast,/DualShock4GamepadHID2/buttonEast]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 8b977e5a-0e2c-43b4-94f1-34060aca4adc
+    m_ActionName: UI/SpinRight[/DualShock4GamepadHID/rightTrigger,/DualShock4GamepadHID1/rightTrigger,/DualShock4GamepadHID2/rightTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 40195f98-7765-4106-8175-e1974897abfb
+    m_ActionName: UI/SpinLeft[/DualShock4GamepadHID/leftTrigger,/DualShock4GamepadHID1/leftTrigger,/DualShock4GamepadHID2/leftTrigger]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: af35530d-9c9f-45fb-979b-207972a98ea6
+    m_ActionName: UI/SkipControls[/DualShock4GamepadHID/select,/DualShock4GamepadHID1/select,/DualShock4GamepadHID2/select]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: Gamepad
-  m_DefaultActionMap: Player
+  m_DefaultActionMap: UI
   m_SplitScreenIndex: -1
   m_Camera: {fileID: 0}
 --- !u!114 &8837087517767416026

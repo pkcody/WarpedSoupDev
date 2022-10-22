@@ -37,6 +37,8 @@ public class CharacterMovement : MonoBehaviour
         playerInput = new PlayerControls();
         _rb = GetComponent<Rigidbody>();
         _col = GetComponent<CapsuleCollider>();
+
+        DontDestroyOnLoad(gameObject);
     }
 
     void Start()

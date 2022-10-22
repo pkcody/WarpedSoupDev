@@ -9,7 +9,7 @@ public class PlayerInputMessager : MonoBehaviour
     {
         print("death");
         FindObjectOfType<PlayerSpawning>().players[PlayerInputManager.instance.playerCount - 1] = player.gameObject;
-        FindObjectOfType<PlayerSpawning>().MovePlayersToStart();
+        FindObjectOfType<PlayerSpawning>().SetInitialPlayerValues();
 
     }
 
