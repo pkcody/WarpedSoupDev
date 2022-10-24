@@ -72,7 +72,6 @@ public class CharacterMovement : MonoBehaviour
     {
         if (ctx.performed)
         {
-            Debug.Log("Trying Pick up");
             foreach (GameObject obj in itemList)
             {
                 var item = obj.GetComponent<Item>();
