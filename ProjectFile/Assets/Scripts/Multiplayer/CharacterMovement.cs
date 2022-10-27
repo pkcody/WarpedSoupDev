@@ -68,6 +68,7 @@ public class CharacterMovement : MonoBehaviour
             doJump = true;
         }
     }
+
     public void OnPickUp(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)

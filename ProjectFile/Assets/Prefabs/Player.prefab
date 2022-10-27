@@ -179,6 +179,7 @@ GameObject:
   - component: {fileID: 1325899304702515758}
   - component: {fileID: 8837087517767416025}
   - component: {fileID: 8837087517767416026}
+  - component: {fileID: 3766529448349884136}
   - component: {fileID: 5990938370862556307}
   m_Layer: 7
   m_Name: Player
@@ -253,7 +254,19 @@ MonoBehaviour:
     m_ActionId: 7607c7b6-cd76-4816-beef-bd0341cfe950
     m_ActionName: UI/Submit[/Keyboard/enter,/DualShock4GamepadHID/buttonSouth,/XInputControllerWindows/buttonSouth]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3766529448349884136}
+        m_TargetAssemblyTypeName: PauseGameMenu, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 15cef263-9014-4fd5-94d9-4e4a6234a6ef
     m_ActionName: UI/Cancel[/Keyboard/escape,/DualShock4GamepadHID/buttonEast,/XInputControllerWindows/buttonEast]
   - m_PersistentCalls:
@@ -317,7 +330,19 @@ MonoBehaviour:
     m_ActionId: c5634f15-8409-4a80-bef2-f1ef73101702
     m_ActionName: Player/Move[/DualShock4GamepadHID/leftStick,/DualShock4GamepadHID1/leftStick,/DualShock4GamepadHID2/leftStick]
   - m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3766529448349884136}
+        m_TargetAssemblyTypeName: PauseGameMenu, Assembly-CSharp
+        m_MethodName: OnPause
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_ActionId: 0df5f233-c2e2-458c-bc6a-c39ff6bc97e4
     m_ActionName: Player/Pause[/DualShock4GamepadHID/start,/DualShock4GamepadHID1/start,/DualShock4GamepadHID2/start]
   - m_PersistentCalls:
@@ -393,6 +418,21 @@ MonoBehaviour:
   lastLook: {x: 0, y: 0, z: 0}
   movementInput: {x: 0, y: 0}
   inventory: {fileID: 0}
+--- !u!114 &3766529448349884136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837087517767416027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7dc9d3c2f00e3694595849d0cbf786e5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPaused: 0
+  playerInput: {fileID: 8837087517767416025}
+  pauseGameMenu: {fileID: 0}
 --- !u!136 &5990938370862556307
 CapsuleCollider:
   m_ObjectHideFlags: 0
