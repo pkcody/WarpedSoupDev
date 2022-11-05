@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: OceansEssence
   m_EditorClassIdentifier: 
   id: 13
-  itemName: OceansEssence
+  itemName: Oceans<br>Essence
   prefab: {fileID: 2320705876819105414, guid: 4b4f626b4d75c154f98f4664ee8e9235, type: 3}
   type: 2
   description: 

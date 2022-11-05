@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: GriffinEgg
   m_EditorClassIdentifier: 
   id: 8
-  itemName: GriffinEgg
+  itemName: Griffin<br>Egg
   prefab: {fileID: 2320705876819105414, guid: 5e8da6800b7257c45b29ba793e73cf9d, type: 3}
   type: 2
   description: 

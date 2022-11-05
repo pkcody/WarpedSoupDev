@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MinotaurSteak
   m_EditorClassIdentifier: 
   id: 12
-  itemName: MinotaurSteak
+  itemName: Minotaur<br>Steak
   prefab: {fileID: 2320705876819105414, guid: fee9ccd50e62b834d95dd8fdce154b24, type: 3}
   type: 2
   description: 

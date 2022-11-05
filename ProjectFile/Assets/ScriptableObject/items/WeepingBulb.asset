@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: WeepingBulb
   m_EditorClassIdentifier: 
   id: 16
-  itemName: WeepingBulb
+  itemName: Weeping<br>Bulb
   prefab: {fileID: 2320705876819105414, guid: c2a15c7d146c4994d89e2fb9e9a6d6d4, type: 3}
   type: 2
   description: 

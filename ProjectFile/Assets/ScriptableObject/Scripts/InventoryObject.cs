@@ -27,7 +27,7 @@ public class InventoryObject : ScriptableObject
     //Pop the first Inventory slot and return it.
     public InventorySlot RemoveItem()
     {
-        Debug.Log(Container[0]);
+        //Debug.Log(Container[0]);
         var slot = Container[0];
         Container.RemoveAt(0);
         return slot;
@@ -35,7 +35,7 @@ public class InventoryObject : ScriptableObject
 
     public bool IfEmpty()
     {
-        Debug.Log(Container.Count > 0);
+        //Debug.Log(Container.Count > 0);
         return Container.Count > 0;
     }
     public void Clear()

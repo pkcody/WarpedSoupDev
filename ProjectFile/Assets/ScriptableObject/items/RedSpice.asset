@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: RedSpice
   m_EditorClassIdentifier: 
   id: 14
-  itemName: RedSpice
+  itemName: Red Spice
   prefab: {fileID: 2320705876819105414, guid: 7e69751d5558aed4da1318b9bb95021d, type: 3}
   type: 2
   description: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SneezingHerb
   m_EditorClassIdentifier: 
   id: 15
-  itemName: SneezingHerb
+  itemName: Sneezing<br>Herb
   prefab: {fileID: 2320705876819105414, guid: c215ad8be8809e048b190209a163ad45, type: 3}
   type: 2
   description: 

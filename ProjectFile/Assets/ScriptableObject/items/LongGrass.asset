@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: LongGrass
   m_EditorClassIdentifier: 
   id: 10
-  itemName: LongGrass
+  itemName: Long<br>Grass
   prefab: {fileID: 2320705876819105414, guid: e117c5c934607324092e53cf8e20bd9e, type: 3}
   type: 2
   description: 

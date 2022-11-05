@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: ManticoreTail
   m_EditorClassIdentifier: 
   id: 11
-  itemName: ManticoreSteak
+  itemName: Manticore<br>Steak
   prefab: {fileID: 2320705876819105414, guid: 5de0b93bc03ad4d4790ba05f508aece6, type: 3}
   type: 2
   description: 

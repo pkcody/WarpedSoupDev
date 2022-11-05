@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: CockatriceHaunch
   m_EditorClassIdentifier: 
   id: 2
-  itemName: CockatriceWing
+  itemName: Cockatrice<br>Wing
   prefab: {fileID: 2320705876819105414, guid: 431295896aac5fc4bbd97cdefb51df3c, type: 3}
   type: 2
   description: 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: DragonHaunch
   m_EditorClassIdentifier: 
   id: 3
-  itemName: DragonHaunch
+  itemName: Dragon<br>Haunch
   prefab: {fileID: 2320705876819105414, guid: f3fc404cfcb7a164a9f8635b5a546268, type: 3}
   type: 2
   description: 

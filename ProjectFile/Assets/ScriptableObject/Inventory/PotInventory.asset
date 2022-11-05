@@ -13,23 +13,5 @@ MonoBehaviour:
   m_Name: PotInventory
   m_EditorClassIdentifier: 
   Container:
-  - item: {fileID: 11400000, guid: 69ee29ec45bdc8d4fa79cfa7de7af5b4, type: 2}
-    amount: 10
-  - item: {fileID: 11400000, guid: 1535be3abb1174243a4844fbe385642d, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: e15d6066a31e6ea45aa56a444d7bfc49, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: d09822f2a94e8cd419b9eec87a7c4835, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: d154da5550849aa41875ef69576a8264, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 49d15574983ffbf4fbca63a443c06b86, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 5be042b7e83730d47a571b0d6adbb933, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: 67a5c57b092981f47845ba9fc62649bf, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: c0e5d95c1c3225043b07aa757294f5f8, type: 2}
-    amount: 0
-  - item: {fileID: 11400000, guid: e15d6066a31e6ea45aa56a444d7bfc49, type: 2}
+  - item: {fileID: 0}
     amount: 0

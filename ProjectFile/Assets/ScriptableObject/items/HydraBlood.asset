@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: HydraBlood
   m_EditorClassIdentifier: 
   id: 9
-  itemName: HydraBlood
+  itemName: Hydra<br>Blood
   prefab: {fileID: 2320705876819105414, guid: b3add9c577dc5394cbb091f4aea8af06, type: 3}
   type: 2
   description: 

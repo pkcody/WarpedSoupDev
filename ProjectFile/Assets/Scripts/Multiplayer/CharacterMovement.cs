@@ -15,7 +15,7 @@ public class CharacterMovement : MonoBehaviour
     [SerializeField]
     private float jumpHeight = 1.0f;
     [SerializeField]
-    private float gravityValue = -9.81f;
+    //private float gravityValue = -9.81f;
 
     private Rigidbody _rb;
     private CapsuleCollider _col;
@@ -68,6 +68,7 @@ public class CharacterMovement : MonoBehaviour
             doJump = true;
         }
     }
+
     public void OnPickUp(InputAction.CallbackContext ctx)
     {
         if (ctx.performed)
@@ -111,7 +112,6 @@ public class CharacterMovement : MonoBehaviour
     public void OnTriggerStay(Collider collision)
     {
         //pickUpText.gameObject.SetActive(true);
-        //Debug.Log("aaaaaaaaaaaaaaaaaaa");
     }
 
     public void OnTriggerExit(Collider collision)

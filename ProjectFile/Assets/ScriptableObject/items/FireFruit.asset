@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: FireFruit
   m_EditorClassIdentifier: 
   id: 5
-  itemName: FireFruit
+  itemName: Fire Fruit
   prefab: {fileID: 2320705876819105414, guid: 117eb15064bc5c64c9bbb618e5926d8d, type: 3}
   type: 2
   description: 
