@@ -8,6 +8,7 @@ public class PauseGameMenu : MonoBehaviour
     public bool isPaused;
     public PlayerInput playerInput;
     public GameObject pauseGameMenu;
+    public GameObject settingsMenu;
 
     public void OnPause(InputAction.CallbackContext ctx)
     {
@@ -18,6 +19,7 @@ public class PauseGameMenu : MonoBehaviour
                // Time.timeScale = 0;
                 playerInput.SwitchCurrentActionMap("UI");
                 pauseGameMenu.SetActive(true);
+                settingsMenu.SetActive(false);
                 InputSystem.settings.updateMode = InputSettings.UpdateMode.ProcessEventsInDynamicUpdate;
                 Debug.Log("Game Paused");
             }

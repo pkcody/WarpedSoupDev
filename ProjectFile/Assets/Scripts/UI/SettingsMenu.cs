@@ -1,16 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SettingsMenu : MonoBehaviour
 {
-    public GameObject settingsGameMenu;
-    private void Awake()
+    public Button ExitButton;
+    public Button StartButton;
+
+    private void Start()
     {
-        settingsGameMenu.SetActive(false);
+        ExitButton.Select();
+        
     }
 
-    public void ToggleSettings()
+    public void OnDisable()
+    {
+        StartButton.Select();
+    }
+
+    /*
+    public void ToggleSettingsOn()
     {
         if (!settingsGameMenu.activeSelf)
         {
@@ -18,14 +28,18 @@ public class SettingsMenu : MonoBehaviour
             settingsGameMenu.SetActive(true);
             Debug.Log("Game Settings Open");
         }
+    }
 
-        else if (settingsGameMenu.activeSelf)
+    public void ToggleSettingsOff()
+    {
+        if (settingsGameMenu.activeSelf)
         {
-          //  Time.timeScale = 1;
+            //  Time.timeScale = 1;
             settingsGameMenu.SetActive(false);
             Debug.Log("Game Settings Close");
 
         }
     }
+    */
 
 }

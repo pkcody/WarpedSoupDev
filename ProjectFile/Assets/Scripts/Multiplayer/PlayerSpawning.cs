@@ -91,5 +91,6 @@ public class PlayerSpawning : MonoBehaviour
                 go.GetComponent<CharacterMovement>().inventory = inv[Index];
             }
         }
+        FindObjectOfType<PauseHunter>().pauseHunt();
     }
 }

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 
@@ -28,6 +29,14 @@ public class ChangeScene : MonoBehaviour
     private void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
+    }
+
+    public void StartGameScene()
+    {
+        if (PlayerSpawning.instance.players[0] != null)
+        {
+            SceneManager.LoadScene("CollectGameSide");
+        }
     }
 
     public void ChangeToScene(string scene)

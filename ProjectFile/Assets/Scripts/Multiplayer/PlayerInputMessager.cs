@@ -5,6 +5,22 @@ using UnityEngine.InputSystem;
 
 public class PlayerInputMessager : MonoBehaviour
 {
+    public static PlayerInputMessager instance;
+
+    private void Awake()
+    {
+        if (instance == null)
+        {
+            instance = this;
+        }
+        else
+        {
+            Destroy(gameObject);
+        }
+
+        DontDestroyOnLoad(gameObject);
+    }
+
     private void OnPlayerJoined(PlayerInput player)
     {
         print("death");
