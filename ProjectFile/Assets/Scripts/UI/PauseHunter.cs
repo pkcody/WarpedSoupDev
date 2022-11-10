@@ -20,6 +20,6 @@ public class PauseHunter : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        
+
     }
 }

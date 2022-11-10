@@ -52,6 +52,12 @@ public class PlayerSpawning : MonoBehaviour
                     go.GetComponent<PlayerInput>().SwitchCurrentActionMap("Player");
                     go.GetComponent<PlayerInput>().defaultActionMap = "Player";
                 }
+                else if (SceneManager.GetActiveScene().name == "Credits")
+                {
+                    go.GetComponent<PlayerInput>().SwitchCurrentActionMap("UI");
+                    print("calling");
+                    go.GetComponent<PlayerInput>().defaultActionMap = "UI";
+                }
             }
         }
     }

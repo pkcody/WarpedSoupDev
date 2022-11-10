@@ -257,7 +257,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 3766529448349884136}
         m_TargetAssemblyTypeName: PauseGameMenu, Assembly-CSharp
-        m_MethodName: OnPause
+        m_MethodName: OnUnPause
         m_Mode: 0
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -433,6 +433,7 @@ MonoBehaviour:
   isPaused: 0
   playerInput: {fileID: 8837087517767416025}
   pauseGameMenu: {fileID: 0}
+  settingsMenu: {fileID: 0}
 --- !u!136 &5990938370862556307
 CapsuleCollider:
   m_ObjectHideFlags: 0

@@ -11,35 +11,11 @@ public class SettingsMenu : MonoBehaviour
     private void Start()
     {
         ExitButton.Select();
-        
     }
 
     public void OnDisable()
     {
         StartButton.Select();
     }
-
-    /*
-    public void ToggleSettingsOn()
-    {
-        if (!settingsGameMenu.activeSelf)
-        {
-          //  Time.timeScale = 0;
-            settingsGameMenu.SetActive(true);
-            Debug.Log("Game Settings Open");
-        }
-    }
-
-    public void ToggleSettingsOff()
-    {
-        if (settingsGameMenu.activeSelf)
-        {
-            //  Time.timeScale = 1;
-            settingsGameMenu.SetActive(false);
-            Debug.Log("Game Settings Close");
-
-        }
-    }
-    */
 
 }
