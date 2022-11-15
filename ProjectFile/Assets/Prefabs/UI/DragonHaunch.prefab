@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4490014461111001460}
   - component: {fileID: 8663925465872849193}
   - component: {fileID: 765947360439966193}
+  - component: {fileID: 8916449028576260081}
   m_Layer: 5
   m_Name: DragonHaunch
   m_TagString: Untagged
@@ -77,6 +78,26 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!95 &8916449028576260081
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2320705876819105414}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: fe7ac78b36acbdc46aba7d84cebb9d66, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8401931610301673827
 GameObject:
   m_ObjectHideFlags: 0

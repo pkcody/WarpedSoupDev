@@ -42,9 +42,17 @@ public class DisplayInventory : MonoBehaviour
     {
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            if (itemsDisplayed.ContainsKey(inventory.Container[i]))
+            if (itemsDisplayed.ContainsKey(inventory.Container[i])&& inventory.Container[i]!=null)
             {
-                itemsDisplayed[inventory.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                string PastText = itemsDisplayed[inventory.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text;
+                string CurrentText = inventory.Container[i].amount.ToString("n0");
+                if (CurrentText != PastText)
+                {
+                    Debug.Log("---------");
+                    itemsDisplayed[inventory.Container[i]].GetComponentInChildren<TextMeshProUGUI>().text = inventory.Container[i].amount.ToString("n0");
+                    var Anim = itemsDisplayed[inventory.Container[i]].GetComponent<Animator>();
+                    Anim.SetTrigger("AnimTrigger");
+                }
             }
             else
             {
