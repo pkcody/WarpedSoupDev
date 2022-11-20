@@ -18,16 +18,16 @@ public class IngredientFall : MonoBehaviour
             int randomIndex = Random.Range(0, ingredients.Length - 1);
             int specialIndex = ingredients.Length - 1;
 
-            Vector3 randomSpawnPosition = new Vector3(Random.Range(-10f, 10f), 12, -20);
+            Vector3 randomSpawnPosition = new Vector3(Random.Range(-8.5f, 8.5f), 12, -20);
             GameObject ingredient;
             if (counter == 0)
             {
-                ingredient = Instantiate(ingredients[specialIndex], randomSpawnPosition, Quaternion.Euler(Random.Range(-40, -20), 0, Random.Range(-180, 180)));
+                ingredient = Instantiate(ingredients[specialIndex], randomSpawnPosition, Quaternion.Euler(Random.Range(-40, -20), 0, Random.Range(-90, 90)));
                 counter = Random.Range(10, 20);
             }
             else
             {
-                ingredient = Instantiate(ingredients[randomIndex], randomSpawnPosition, Quaternion.Euler(Random.Range(-40, -20), 0, Random.Range(-180, 180)));
+                ingredient = Instantiate(ingredients[randomIndex], randomSpawnPosition, Quaternion.Euler(Random.Range(-40, -20), 0, Random.Range(-90, 90)));
             }
 
             transform.position += new Vector3(0, -0.5f, 0);
