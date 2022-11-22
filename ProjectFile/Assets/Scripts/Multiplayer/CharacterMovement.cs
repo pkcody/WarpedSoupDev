@@ -34,6 +34,9 @@ public class CharacterMovement : MonoBehaviour
     private List<GameObject> itemList = new List<GameObject>();
     private GameObject pots;
 
+    public Animator animator;
+    public Rigidbody RB;
+
     private void Awake()
     {
         playerInput = new PlayerControls();
@@ -47,6 +50,7 @@ public class CharacterMovement : MonoBehaviour
     {
         inventory.Container.Clear();
         //pickUpText.gameObject.SetActive(false);
+        RB = GetComponent<Rigidbody>();
     }
 
     //player movement
@@ -166,6 +170,17 @@ public class CharacterMovement : MonoBehaviour
         {
             _rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             doJump = false;
+        }
+
+        if (movementInput.x == 0f)
+        {
+            Debug.Log("Idle");
+            animator.SetFloat("Speed", 0.0f);
+        }
+        else if (movementInput.x > 0f)
+        {
+            Debug.Log("Running");
+            animator.SetFloat("Speed", 1.0f);
         }
     }
 }
