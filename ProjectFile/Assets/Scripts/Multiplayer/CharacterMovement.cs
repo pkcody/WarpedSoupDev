@@ -161,16 +161,6 @@ public class CharacterMovement : MonoBehaviour
             lastLook = new Vector3(movementInput.x, 0, movementInput.y);
         }
         body.transform.forward = lastLook;
-    }
-
-
-    private void FixedUpdate()
-    {
-        if (doJump)
-        {
-            _rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
-            doJump = false;
-        }
 
         if (movementInput.x == 0f)
         {
@@ -181,6 +171,16 @@ public class CharacterMovement : MonoBehaviour
         {
             Debug.Log("Running");
             animator.SetFloat("Speed", 1.0f);
+        }
+    }
+
+
+    private void FixedUpdate()
+    {
+        if (doJump)
+        {
+            _rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
+            doJump = false;
         }
     }
 }
