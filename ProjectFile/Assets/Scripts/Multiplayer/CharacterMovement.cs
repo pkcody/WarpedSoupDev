@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class CharacterMovement : MonoBehaviour
 {
@@ -154,6 +155,10 @@ public class CharacterMovement : MonoBehaviour
     //update
     private void Update()
     {
+        Scene scene = SceneManager.GetActiveScene();
+
+        Debug.Log(scene.name);
+
         transform.Translate(new Vector3(movementInput.x, 0, movementInput.y) * playerSpeed * Time.deltaTime);
         _rb.velocity = new Vector3(0f, _rb.velocity.y, 0f);
         if (movementInput.x != 0f || movementInput.y != 0f)
@@ -162,15 +167,25 @@ public class CharacterMovement : MonoBehaviour
         }
         body.transform.forward = lastLook;
 
-        if (movementInput.x == 0f)
+        if (movementInput.x == 0f || movementInput.y == 0f)
         {
-            Debug.Log("Idle");
             animator.SetFloat("Speed", 0.0f);
+
+            if ((scene.name == "MakeGameSide"))
+            {
+                Debug.Log("IdleCarry");
+                animator.SetBool("CarryScene", true);
+            }
         }
-        else if (movementInput.x > 0f)
+        else if (movementInput.x > 0f || movementInput.y > 0f)
         {
-            Debug.Log("Running");
             animator.SetFloat("Speed", 1.0f);
+
+            if ((scene.name == "MakeGameSide"))
+            {
+                Debug.Log("IdleRun");
+                animator.SetBool("CarryScene", true);
+            }
         }
     }
 
