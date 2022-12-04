@@ -87,8 +87,12 @@ public class CharacterMovement : MonoBehaviour
                 var item = obj.GetComponent<Item>();
                 if (item)
                 {
+                    // add item to inventory
                     inventory.AddItem(item.item, 1);
                     Destroy(obj.gameObject);
+
+                    audioSource.clip = audioClips.Find(clipName => clipName.name == "PickupItem");
+                    audioSource.PlayOneShot(audioSource.clip, 0.5f);
                 }
             }
             itemList.Clear();
@@ -102,6 +106,8 @@ public class CharacterMovement : MonoBehaviour
                 }
                 while (inventory.IfEmpty())
                 {
+                    audioSource.clip = audioClips.Find(clipName => clipName.name == "IngredientSplash");
+                    audioSource.PlayOneShot(audioSource.clip, 0.5f);
                     var slot = inventory.RemoveItem();
                     potInventory.inventory.AddItem(slot.item, slot.amount);
                 }
@@ -174,7 +180,6 @@ public class CharacterMovement : MonoBehaviour
         if (movementInput.x == 0f || movementInput.y == 0f)
         {
             animator.SetFloat("Speed", 0.0f);
-            audioSource.Stop();
             if ((scene.name == "MakeGameSide"))
             {
                 Debug.Log("IdleCarry");
@@ -187,8 +192,7 @@ public class CharacterMovement : MonoBehaviour
             if (!audioSource.isPlaying)
             {
                 audioSource.clip = audioClips.Find(clipName => clipName.name == "Walking");
-                audioSource.loop = true;
-                audioSource.Play();
+                audioSource.PlayOneShot(audioSource.clip, 0.3f);
             }
 
             if ((scene.name == "MakeGameSide"))
@@ -206,6 +210,8 @@ public class CharacterMovement : MonoBehaviour
         {
             _rb.AddForce(Vector3.up * jumpHeight, ForceMode.Impulse);
             doJump = false;
+            audioSource.clip = audioClips.Find(clipName => clipName.name == "Jump");
+            audioSource.PlayOneShot(audioSource.clip, 0.5f);
         }
     }
 }
