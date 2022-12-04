@@ -38,6 +38,10 @@ public class CharacterMovement : MonoBehaviour
     public Animator animator;
     public Rigidbody RB;
 
+    //Audio
+    public AudioSource audioSource;
+    public List<AudioClip> audioClips;
+
     private void Awake()
     {
         playerInput = new PlayerControls();
@@ -170,7 +174,7 @@ public class CharacterMovement : MonoBehaviour
         if (movementInput.x == 0f || movementInput.y == 0f)
         {
             animator.SetFloat("Speed", 0.0f);
-
+            audioSource.Stop();
             if ((scene.name == "MakeGameSide"))
             {
                 Debug.Log("IdleCarry");
@@ -180,6 +184,12 @@ public class CharacterMovement : MonoBehaviour
         else if (movementInput.x > 0f || movementInput.y > 0f)
         {
             animator.SetFloat("Speed", 1.0f);
+            if (!audioSource.isPlaying)
+            {
+                audioSource.clip = audioClips.Find(clipName => clipName.name == "Walking");
+                audioSource.loop = true;
+                audioSource.Play();
+            }
 
             if ((scene.name == "MakeGameSide"))
             {

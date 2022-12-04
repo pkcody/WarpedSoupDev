@@ -89,11 +89,24 @@ public class PlayerSpawning : MonoBehaviour
         {
             if (go != null)
             {
+                // Player spawning
                 int Index = System.Array.IndexOf(players, go);
                 go.transform.position = MenuSpawnPos[Index].position;
-
                 go.transform.eulerAngles = Vector3.zero;
-                go.transform.GetChild(0).GetComponent<MeshRenderer>().material = mats[Index];
+
+                //Player mats
+                foreach (var mr in go.GetComponentsInChildren<MeshRenderer>())
+                {
+                    
+                    if(mr.material.name.Contains("ReplaceMe"))
+                    {
+                        print(mr.gameObject.name);
+                        mr.material = mats[Index];
+                        print("replacing: "+ mr.material);
+                    }
+                }
+
+                //go.transform.GetChild(0).GetComponent<MeshRenderer>().material = mats[Index];
                 go.GetComponent<CharacterMovement>().inventory = inv[Index];
             }
         }
