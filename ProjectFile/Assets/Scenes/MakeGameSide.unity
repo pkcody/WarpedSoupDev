@@ -701,7 +701,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1542793999}
-  ScoreTrigger: {fileID: 2093518305}
   startingTime: 50
   countdownText: {fileID: 1981220410}
 --- !u!1001 &707165136
@@ -2990,6 +2989,10 @@ PrefabInstance:
       propertyPath: anim
       value: 
       objectReference: {fileID: 7275033630682925659}
+    - target: {fileID: 7275033631380955728, guid: 812451b3fb0b28f46b7b0a31c0cc844e, type: 3}
+      propertyPath: ScoreTrigger
+      value: 
+      objectReference: {fileID: 2093518305}
     - target: {fileID: 7275033631380955729, guid: 812451b3fb0b28f46b7b0a31c0cc844e, type: 3}
       propertyPath: m_Radius
       value: 0.03

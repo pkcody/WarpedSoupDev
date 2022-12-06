@@ -27,12 +27,14 @@ public class IngrediantChecker : MonoBehaviour
     }
     public void CheckTrigger()
     {
+        int ItemCount = 0;
+        int correctItem = 0;
         ScoreInst = GameObject.Find("ScoreSystem");
         for (int i = 0; i < inventory.Container.Count; i++)
         {
-            TotalItemCount += inventory.Container[i].amount;
+            ItemCount += inventory.Container[i].amount;
         }
-
+        TotalItemCount = ItemCount;
         for (int i = 0; i < 4; i++)
         {
             
@@ -48,19 +50,21 @@ public class IngrediantChecker : MonoBehaviour
             {
                 CorrectSets = count[i];
             }
-            CorrectItemCount += count[i];
-            Debug.Log(CorrectItemCount);
+            correctItem += count[i];
         }
-
+        CorrectItemCount = correctItem;
         CalculateScore();
 
     }
 
     public void CalculateScore()
     {
-        ScoreCount = CorrectSets * 5 + CorrectItemCount * 2 - TotalItemCount;
-        ScoreInst.GetComponent<ScoreSystem>().score += ScoreCount;
-        ScoreText.text = ScoreInst.GetComponent<ScoreSystem>().score.ToString("0");
+        ScoreCount = CorrectSets * 10 + CorrectItemCount * 3 - TotalItemCount;
+        var currentScore = ScoreInst.GetComponent<ScoreSystem>().score + ScoreCount;
+        ScoreText.text = currentScore.ToString("0");
     }
-
+    void OnDestroy()
+    {
+        ScoreInst.GetComponent<ScoreSystem>().score += ScoreCount;
+    }
 }

@@ -7,7 +7,6 @@ using TMPro;
 public class CountdownTimerScene2 : MonoBehaviour
 {
     public GameObject cam;
-    public GameObject ScoreTrigger;
     float currentTime = 0f;
     public float startingTime = 30f;
     bool triggerOn = true;
@@ -24,12 +23,6 @@ public class CountdownTimerScene2 : MonoBehaviour
     {
         currentTime -= 1 * Time.deltaTime;
         countdownText.text = currentTime.ToString("0");
-
-        if (currentTime <= 10 && triggerOn)
-        {
-            ScoreTrigger.GetComponent<IngrediantChecker>().CheckTrigger();
-            triggerOn = false;
-        }
 
         if (currentTime <= 5)
         {

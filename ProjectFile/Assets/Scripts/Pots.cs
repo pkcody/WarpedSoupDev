@@ -8,6 +8,8 @@ public class Pots : MonoBehaviour
 {
     public Animator anim;
     public InventoryObject inventory;
+    public GameObject ScoreTrigger;
+
     void Start()
     {
         anim = gameObject.GetComponent<Animator>();
@@ -22,5 +24,6 @@ public class Pots : MonoBehaviour
     public void PlayAnimation()
     {
         anim.SetTrigger("Active");
+        ScoreTrigger.GetComponent<IngrediantChecker>().CheckTrigger();
     }
 }
