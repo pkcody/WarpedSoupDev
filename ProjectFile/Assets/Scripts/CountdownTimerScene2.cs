@@ -29,7 +29,6 @@ public class CountdownTimerScene2 : MonoBehaviour
         {
             ScoreTrigger.GetComponent<IngrediantChecker>().CheckTrigger();
             triggerOn = false;
-            Debug.Log("go");
         }
 
         if (currentTime <= 5)

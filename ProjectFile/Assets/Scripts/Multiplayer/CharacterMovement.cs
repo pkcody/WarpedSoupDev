@@ -167,7 +167,7 @@ public class CharacterMovement : MonoBehaviour
     {
         Scene scene = SceneManager.GetActiveScene();
 
-        Debug.Log(scene.name);
+        //Debug.Log(scene.name);
 
         transform.Translate(new Vector3(movementInput.x, 0, movementInput.y) * playerSpeed * Time.deltaTime);
         _rb.velocity = new Vector3(0f, _rb.velocity.y, 0f);
@@ -182,7 +182,7 @@ public class CharacterMovement : MonoBehaviour
             animator.SetFloat("Speed", 0.0f);
             if ((scene.name == "MakeGameSide"))
             {
-                Debug.Log("IdleCarry");
+                //Debug.Log("IdleCarry");
                 animator.SetBool("CarryScene", true);
             }
         }
@@ -197,7 +197,7 @@ public class CharacterMovement : MonoBehaviour
 
             if ((scene.name == "MakeGameSide"))
             {
-                Debug.Log("IdleRun");
+                //Debug.Log("IdleRun");
                 animator.SetBool("CarryScene", true);
             }
         }
