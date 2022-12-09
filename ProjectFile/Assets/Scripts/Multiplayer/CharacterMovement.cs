@@ -69,7 +69,12 @@ public class CharacterMovement : MonoBehaviour
         playerInput.Disable();
     }
 
-    public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    //public void OnMove(InputAction.CallbackContext ctx) => movementInput = ctx.ReadValue<Vector2>();
+    public void OnMove(InputAction.CallbackContext ctx)
+    {
+        movementInput = ctx.ReadValue<Vector2>();
+    }
+
     public void OnJump(InputAction.CallbackContext ctx)
     {
         if (ctx.performed && IsGrounded())
@@ -82,8 +87,10 @@ public class CharacterMovement : MonoBehaviour
     {
         if (ctx.performed)
         {
+
             foreach (GameObject obj in itemList)
             {
+                animator.Play("PickingUp", -1, 0f);
                 var item = obj.GetComponent<Item>();
                 if (item)
                 {
@@ -177,32 +184,40 @@ public class CharacterMovement : MonoBehaviour
         }
         body.transform.forward = lastLook;
 
-        if (movementInput.x == 0f || movementInput.y == 0f)
+
+        if (movementInput != Vector2.zero)
         {
-            animator.SetFloat("Speed", 0.0f);
             if ((scene.name == "MakeGameSide"))
             {
-                //Debug.Log("IdleCarry");
+                animator.SetBool("IsMoving", true);
                 animator.SetBool("CarryScene", true);
             }
-        }
-        else if (movementInput.x > 0f || movementInput.y > 0f)
-        {
-            animator.SetFloat("Speed", 1.0f);
+            else
+            {
+                animator.SetBool("IsMoving", true);
+                animator.SetBool("CarryScene", false);
+            }
+
             if (!audioSource.isPlaying)
             {
                 audioSource.clip = audioClips.Find(clipName => clipName.name == "Walking");
                 audioSource.PlayOneShot(audioSource.clip, 0.3f);
             }
-
+        }
+        else
+        {
             if ((scene.name == "MakeGameSide"))
             {
-                //Debug.Log("IdleRun");
+                animator.SetBool("IsMoving", false);
                 animator.SetBool("CarryScene", true);
+            }
+            else
+            {
+                animator.SetBool("IsMoving", false);
+                animator.SetBool("CarryScene", false);
             }
         }
     }
-
 
     private void FixedUpdate()
     {
