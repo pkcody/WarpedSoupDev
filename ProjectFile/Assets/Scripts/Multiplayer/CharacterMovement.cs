@@ -12,7 +12,7 @@ public class CharacterMovement : MonoBehaviour
     public GameObject body;
 
     [SerializeField]
-    private float playerSpeed = 2.0f;
+    public float playerSpeed = 2.0f;
     [SerializeField]
     private float jumpHeight = 1.0f;
     [SerializeField]
