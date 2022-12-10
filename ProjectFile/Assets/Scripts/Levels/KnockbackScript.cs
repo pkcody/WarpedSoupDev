@@ -13,5 +13,9 @@ public class KnockbackScript : MonoBehaviour
         {
             rb.AddForce(-transform.right * thrust, ForceMode.Impulse);
         }
+        if (other.gameObject.tag.Equals("Flour"))
+        {
+            rb.AddForce(transform.right * thrust, ForceMode.Impulse);
+        }
     }
 }

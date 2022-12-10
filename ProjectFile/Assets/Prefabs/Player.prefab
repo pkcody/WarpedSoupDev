@@ -668,7 +668,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6030556706182512203}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -0.488, z: 0}
   m_LocalScale: {x: 0.49477518, y: 0.49477518, z: 0.49477518}
   m_ConstrainProportionsScale: 0
@@ -1156,6 +1156,7 @@ GameObject:
   - component: {fileID: 5990938370862556307}
   - component: {fileID: 5009482057442753951}
   - component: {fileID: 3738552004835415999}
+  - component: {fileID: 7208328841732232906}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -1385,7 +1386,7 @@ MonoBehaviour:
   body: {fileID: 6030556706182512203}
   playerSpeed: 8
   jumpHeight: 5
-  _rb: {fileID: 0}
+  _rb: {fileID: 1325899304702515758}
   distanceToGround: 0.1
   groundLayer:
     serializedVersion: 2
@@ -1394,7 +1395,7 @@ MonoBehaviour:
   movementInput: {x: 0, y: 0}
   inventory: {fileID: 0}
   animator: {fileID: 5009482057442753951}
-  RB: {fileID: 0}
+  RB: {fileID: 1325899304702515758}
   audioSource: {fileID: 3738552004835415999}
   audioClips:
   - {fileID: 8300000, guid: 52626f02d143cc348ae53f2d5f00c044, type: 3}
@@ -1547,6 +1548,20 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &7208328841732232906
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8837087517767416027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: abe2f83ccac618d46ad321c47c2b2bb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  thrust: 100
+  rb: {fileID: 1325899304702515758}
 --- !u!1 &8872159700976736399
 GameObject:
   m_ObjectHideFlags: 0

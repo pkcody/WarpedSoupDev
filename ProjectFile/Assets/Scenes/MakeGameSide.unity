@@ -701,7 +701,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 1542793999}
-  startingTime: 50
+  startingTime: 15
   countdownText: {fileID: 1981220410}
 --- !u!1001 &707165136
 PrefabInstance:

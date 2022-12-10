@@ -5,30 +5,15 @@ using UnityEngine;
 public class FlourBags : MonoBehaviour
 {
 
-    public GameObject flourBag;
-    public Transform spawn;
-    public float speed = 2500;
-    public CharacterMovement characterMovement;
+    public float thrust = 100f;
+    public Rigidbody rb;
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider other)
     {
-        GameObject flourBagInstance = Instantiate(flourBag, spawn.position, spawn.rotation);
-        Rigidbody rb = flourBagInstance.GetComponent<Rigidbody>();
-        rb.AddForce(0, 0, -speed);
-        Destroy(flourBagInstance, 3);
-
+        if (other.gameObject.tag.Equals("Knife"))
+        {
+            rb.AddForce(transform.right * thrust, ForceMode.Impulse);
+        }
     }
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void FixedUpdate()
-    {
-        
-    }
 }

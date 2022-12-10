@@ -21,9 +21,10 @@ public class DisplayRecipe : MonoBehaviour
             var obj = Instantiate(Recipe1.Container[i].prefab, Vector3.zero, Quaternion.identity, transform);
             Debug.Log("a");
             obj.GetComponent<RectTransform>().localPosition = GetPosition(i);
-            obj.GetComponent<RectTransform>().localScale = new Vector3(2f, 1.5f, 2f);
+            //obj.GetComponent<RectTransform>().localScale = new Vector3(2f, 1.5f, 2f);
+            obj.GetComponent<RectTransform>().localScale = new Vector3(4f, 2f, 4f);
             obj.GetComponentInChildren<TextMeshProUGUI>().text = Recipe1.Container[i].itemName;
-            obj.GetComponentInChildren<TextMeshProUGUI>().fontSize = 3f;
+            obj.GetComponentInChildren<TextMeshProUGUI>().fontSize = 6f;
             obj.GetComponentInChildren<TextMeshProUGUI>().color = Color.black;
             //stored.Add(obj);
         }

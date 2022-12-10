@@ -625,6 +625,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6606669883883898673}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
@@ -680,6 +681,7 @@ PrefabInstance:
       value: Flour
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
 --- !u!1 &2468416258535610812 stripped
 GameObject:
@@ -757,6 +759,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6606669883883898673}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
@@ -809,9 +812,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
       propertyPath: m_TagString
-      value: Flour
+      value: Knife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
 --- !u!1 &6222528114093112002 stripped
 GameObject:
@@ -889,6 +893,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6606669883883898673}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
@@ -944,6 +949,7 @@ PrefabInstance:
       value: Flour
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
 --- !u!1 &8637317223402286119 stripped
 GameObject:
@@ -1021,6 +1027,7 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
+    serializedVersion: 2
     m_TransformParent: {fileID: 6606669883883898673}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
@@ -1073,9 +1080,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
       propertyPath: m_TagString
-      value: Flour
+      value: Knife
       objectReference: {fileID: 0}
     m_RemovedComponents: []
+    m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: ba022f2b04645994b8d380021bb341c5, type: 3}
 --- !u!1 &8605887173015449519 stripped
 GameObject:
